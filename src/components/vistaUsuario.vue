@@ -82,7 +82,7 @@
         },
         methods: {
             verReservas(e){
-                this.axios.get("https://hotel-equipo13-api.herokuapp.com/perfil/consultar/" + localStorage.getItem('currentEmail'))
+                this.axios.get("https://api-hotel-prueba-1.herokuapp.com/perfil/consultar/" + localStorage.getItem('currentEmail'))
                 .then((result)=>{
                     //this.posts.detalles = JSON.stringify(result.data)
                     //window.location("../reserva/hacerReserva")
@@ -103,7 +103,7 @@
                 e.preventDefault();
             },
             verDatos(e){
-                this.axios.get("https://hotel-equipo13-api.herokuapp.com/usuarios/" + localStorage.getItem('currentEmail'))
+                this.axios.get("https://api-hotel-prueba-1.herokuapp.com/usuarios/" + localStorage.getItem('currentEmail'))
                 .then((result)=>{
                     this.datosUser.nombres = result.data.nombres
                     this.datosUser.apellidos = result.data.apellidos
